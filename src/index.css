@@ -1,0 +1,38 @@
+/* Tailwind base - these directives require Tailwind to be installed and configured */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Small custom overrides to match PostCraft AI visual feel */
+:root {
+  --pcai-bg: #f6f9ff;
+  --pcai-card: #ffffff;
+  --pcai-border: #e6edf6;
+  --pcai-primary: #2563eb; /* blue-600 */
+}
+
+html, body, #root {
+  height: 100%;
+}
+body {
+  background: var(--pcai-bg);
+  color: #0f172a;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Utility helpers for cards */
+.pc-card {
+  @apply bg-white rounded-lg border shadow-sm;
+}
+
+.pc-btn-primary {
+  @apply bg-blue-600 text-white px-4 py-2 rounded-md font-medium hover:bg-blue-700;
+}
+
+.pc-btn-secondary {
+  @apply border border-gray-200 bg-white text-gray-700 px-3 py-2 rounded-md hover:bg-gray-50;
+}
+
+.pc-muted {
+  color: #64748b;
+}
